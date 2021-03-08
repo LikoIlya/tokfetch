@@ -1,11 +1,10 @@
 Tokfetch Manager is an open source project that provides a command line
 tool to fetch token balances to SQlite db.
 
+![image](https://img.shields.io/docker/image-size/ilyaliko/tokfetch?style=flat-square)
 ![image](https://img.shields.io/docker/automated/ilyaliko/tokfetch?style=flat-square)
 
 # Tokfetch Manager
-___________
-
 
 Tokfetch Manager provides technical operations for balance monitoring:
 
