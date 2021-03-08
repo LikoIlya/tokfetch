@@ -2,6 +2,8 @@ build
 dist
 .pytest_cache
 .eggs
-sto.egg-info
+tokfetch.egg-info
 venv
 tests
+*.chain.ini
+*.sqlite
