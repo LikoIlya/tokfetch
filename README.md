@@ -1,7 +1,7 @@
 Tokfetch Manager is an open source project that provides a command line
 tool to fetch token balances to SQlite db.
 
-![image](https://img.shields.io/travis/LikoIlya/tokfetch.svg)
+![image](https://img.shields.io/docker/automated/ilyaliko/tokfetch?style=flat-square)
 
 # Tokfetch Manager
 ___________
@@ -34,7 +34,7 @@ The `tokfetch` command line application is provided as a Docker image to minimiz
 Install [Docker](https://www.docker.com/products/docker-desktop) (Linux, OSX).
 
 ### OSX and Linux
-Set up a shell alias for sto command that executes Dockerised binary:
+Set up a shell alias for tokfetch command that executes Dockerised binary:
 
 ```shell
 alias tokfetch='docker run -v `pwd`:`pwd` -w `pwd` ilyaliko/tokfetch:latest'
@@ -46,9 +46,7 @@ Then you can do:
 tokfetch --help
 ```
 
-Docker will automatically pull an image from Docker registry for your local computer on the first run. We map port 2222 to the localhost.
-
-[image]()
+Docker will automatically pull an image from Docker registry for your local computer on the first run.
 
 After installing see how to set up the software.
 
@@ -60,7 +58,7 @@ Create Python virtual environment.
 Then within the activated venv do:
 
 ```shell
-git clone "git+https://github.com/TokenMarketNet/sto.git"
+git clone "git+https://github.com/TokenMarketNet/tokfetch.git"
 python -m venv venv  # Python 3 needed
 source venv/bin/activate
 pip install -U pip  # Make sure you are at least pip 18.1 - older versions will fail
@@ -76,5 +74,5 @@ tracker](https://github.com/LikoIlya/tokfetch)
 
 [Docker releases](https://hub.docker.com/r/ilyaliko/tokfetch/)
 
-[Python releases](https://pypi.org/project/sto/)
+[Python releases](https://pypi.org/project/tokfetch/)
 
