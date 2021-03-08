@@ -37,7 +37,7 @@ Install [Docker](https://www.docker.com/products/docker-desktop) (Linux, OSX).
 Set up a shell alias for sto command that executes Dockerised binary:
 
 ```shell
-alias tokfetch='docker run -p 2222:2222 -v `pwd`:`pwd` -w `pwd` ilyaliko/tokfetch:latest'
+alias tokfetch='docker run -v `pwd`:`pwd` -w `pwd` ilyaliko/tokfetch:latest'
 ```
 
 Then you can do:
