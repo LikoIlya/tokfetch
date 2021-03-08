@@ -68,12 +68,6 @@ pip install -e ".[dev,test]"
 ```
 
 
-##Usage
-
-```shell
-
-```
-
 ## Links
 
 
