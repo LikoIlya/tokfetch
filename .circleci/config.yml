@@ -1,21 +1,17 @@
 version: 2.1
 
-orbs:
-  python: circleci/python@0.2.1
-
 jobs:
-  build-and-test:
-    executor: python/default
-    steps:
-      - checkout
-      - python/load-cache
-      - python/install-deps
-      - python/save-cache
-      - run:
-          command: tox -e py39
-          name: Test
+    test:
+        docker:
+            - image: fkrull/multi-python
+        steps:
+            - checkout
+            - run:
+                name: Test
+                command: 'tox'
 
 workflows:
-  main:
-    jobs:
-      - build-and-test
+    version: 2
+    test:
+        jobs:
+            - test
