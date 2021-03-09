@@ -6,7 +6,6 @@ import pytest
 from click.testing import CliRunner
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from web3 import Web3, EthereumTesterProvider
 
 from tokfetch.models.implementation import Base
 
@@ -28,29 +27,6 @@ def dbsession(db_path):
     Session = sessionmaker(bind=engine)
     session = Session()
     return session
-
-
-@pytest.fixture
-def monkey_patch_py_evm_gas_limit():
-    from eth_tester.backends.pyevm import main
-    main.GENESIS_GAS_LIMIT = 9999999999
-
-
-@pytest.fixture
-def web3_test_provider(monkey_patch_py_evm_gas_limit):
-    return EthereumTesterProvider()
-
-
-@pytest.fixture
-def web3(web3_test_provider):
-    return Web3(web3_test_provider)
-
-
-@pytest.fixture
-def network(web3_test_provider):
-    """Network name to be used in database when run against in-memory test chain."""
-    return "testing"
-
 
 @pytest.fixture()
 def logger(caplog):

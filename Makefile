@@ -56,9 +56,9 @@ publish-docker:
 	echo "Docker local version is now " && docker run -p 2222:2222 -v `pwd`:`pwd` -w `pwd` ilyaliko/tokfetch:latest version
 	# Push the release to hub
 	docker tag ilyaliko/tokfetch:latest ilyaliko/tokfetch:$(VERSION)
-	docker push ilyaliko/tokfetch:$(VERSION) && docker push ilyaliko/sto:latest
+	docker push ilyaliko/tokfetch:$(VERSION) && docker push ilyaliko/tokfetch:latest
 	# bumpversion --new-version $(VERSION) devnum
-	# if [ "$(VERSION)" != `sto --version`] ; then echo "bumpversion failed us" ; exit 1 ; fi
+	# if [ "$(VERSION)" != `tokfetch --version`] ; then echo "bumpversion failed us" ; exit 1 ; fi
 
 dist: clean
 	python setup.py sdist bdist_wheel

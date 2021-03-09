@@ -22,6 +22,7 @@ test_requirements = [
 ]
 
 dev_requirements = [
+    'pip-tools',
     "bumpversion>=0.5.3,<1",
     "wheel",
     "setuptools",

@@ -57,7 +57,7 @@ Create Python virtual environment.
 Then within the activated venv do:
 
 ```shell
-git clone "git+https://github.com/TokenMarketNet/tokfetch.git"
+git clone "git+https://github.com/LikoIlya/tokfetch.git"
 python -m venv venv  # Python 3 needed
 source venv/bin/activate
 pip install -U pip  # Make sure you are at least pip 18.1 - older versions will fail
