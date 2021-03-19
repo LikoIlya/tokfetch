@@ -21,4 +21,4 @@ RUN pip install -U pip
 RUN pip install -r requirements.txt
 RUN pip install -e .
 
-ENTRYPOINT ["tokfetch"]
+CMD ["tokfetch"]
