@@ -24,7 +24,7 @@ def setup_database(logger, db_filename) -> Tuple[Session, bool]:
         new = False
 
     Session = sessionmaker(bind=engine)
-    session = Session()
+    session = Session(autocommit=True)
     return session, new
 
 
